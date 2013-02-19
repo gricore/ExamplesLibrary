@@ -1,0 +1,15 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:CustomControlLibrary="clr-namespace:CustomControlLibrary;assembly=CustomControlLibrary" 
+        x:Name="TestUserControl"
+        x:Class="TestApplication.MainWindow"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+
+        <CustomControlLibrary:CustomListBox 
+            SelectedIndex="{Binding ElementName=TestUserControl, Path=SelectedIndex}"
+            ItemsSource="{Binding ElementName=TestUserControl, Path=ListBoxSource}"/>
+
+    </Grid>
+</Window>
